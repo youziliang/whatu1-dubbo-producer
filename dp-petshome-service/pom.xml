@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.petshome</groupId>
+		<artifactId>dp-petshome</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.petshome.service</groupId>
+	<artifactId>dp-petshome-service</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.petshome.persistence</groupId>
+			<artifactId>dp-petshome-persistence</artifactId>
+			<version>${petshome.version}</version>
+		</dependency>
+
+		<!-- Dubbo Provider -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>${dubbo.version}</version>
+		</dependency>
+
+		<!-- zookeeper 客户端 -->
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>${zkclient.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>dp-petshome-service</finalName>
+	</build>
+
+</project>
